@@ -1,5 +1,8 @@
+use grpc_video_server::server::server::run_grpc;
+
+pub mod models;
 pub mod server;
-use crate::server::run_grpc;
+pub mod utils;
 
 #[tokio::main]
 async fn main() {

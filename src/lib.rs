@@ -1,16 +1,11 @@
 pub mod client;
+pub mod models;
 pub mod server;
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+pub mod utils;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+pub mod client_;
+pub mod server_;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+pub mod file_protos {
+    tonic::include_proto!("file_protos");
 }

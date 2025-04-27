@@ -1,0 +1,36 @@
+syntax = "proto3";
+package file_protos;
+
+service FileService {
+  rpc SayHello (DownloadFileRequest) returns (DownloadFileResponse);
+
+    // rpc DownloadFile(DownloadFileRequest) returns (stream DownloadFileResponse);
+    // rpc UploadFile(stream UploadFileRequest) returns (UploadFileResponse);
+    // rpc ListFiles(ListFilesRequest) returns (stream ListFilesResponse);
+}
+
+message DownloadFileRequest {
+    string name = 1;
+}
+
+message DownloadFileResponse {
+    bytes chunk = 1;
+}
+
+message UploadFileRequest {
+    oneof type {
+      string name = 1;
+      bytes chunk = 2;
+    }
+}
+  
+message UploadFileResponse {
+}
+
+message ListFilesRequest {
+}
+
+message ListFilesResponse {
+  string name = 1;
+  uint64 size = 2;
+}

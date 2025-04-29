@@ -11,7 +11,7 @@ use tonic::transport::Server;
 use tonic::Status;
 
 pub async fn run_grpc_server(dist: &str, port: &str) -> Result<()> {
-    let addr = format!("{}:{}", GRPC_ADDR, port);
+    let addr = format!("{}:{}", SERVER_LOCAL_ADDR, port);
     let addr = SocketAddr::from_str(&addr).unwrap();
     let path: PathBuf = PathBuf::from_str(dist)?;
     let file_service = MyUploadService::new(path);

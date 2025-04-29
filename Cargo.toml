@@ -15,12 +15,3 @@ tokio-stream = "0.1"
 
 [build-dependencies]
 tonic-build = "*"
-
-
-# [[bin]]
-# name = "helloworld-server"
-# path = "src/server.rs"
-
-# [[bin]]
-# name = "helloworld-client"
-# path = "src/client.rs"

@@ -1,3 +1,3 @@
 pub const GRPC_ADDR: &str = "[::1]";
-pub const GRPC_PORT: &str = "50051";
-pub const FILE_PATH: &str = "VIDEOS";
+pub const CHANNEL_SIZE: usize = 10;
+pub const CHUNK_SIZE_BYTES: u64 = 1024 * 1024;
